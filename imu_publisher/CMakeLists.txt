@@ -46,10 +46,11 @@ find_package(sensor_msgs REQUIRED)
 
 add_executable(imu_publisher src/devel/imu_publisher.cpp)
 add_executable(cmdvel_control src/devel/cmdvel_control.cpp src/common/ros2_sport_client.cpp)
+add_executable(ros2serial src/common/ros2serial.cpp)
 
 ament_target_dependencies(imu_publisher ${DEPENDENCY_LIST})
 ament_target_dependencies(cmdvel_control ${DEPENDENCY_LIST})
-
+ament_target_dependencies(ros2serial ${DEPENDENCY_LIST})
 
 install(TARGETS 
         imu_publisher
